@@ -47,6 +47,8 @@ def cite(argument_path):
             # loop over potentially relevant documents
             for idx, document in zip(ids, documents):
 
+                print(f"document idx: {idx}")
+
                 # Get supporting and opposing evidence
                 classification = evidence_classification(claim, document)
 
