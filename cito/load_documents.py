@@ -66,7 +66,7 @@ evidence_collection.add(
     ids=ids
 )
 
-results = collection.query(
+results = evidence_collection.query(
     query_texts=["The muslim brotherhood coming to power threatens American security"],
     n_results=2
 )
