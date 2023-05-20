@@ -15,8 +15,6 @@ def cite(argument_path):
     # Convert argument into claims
     argument_claims = claims(argument)
 
-    print(argument_claims)
-
     # Instantiate collection of evidence
     evidence_collection = create_collection()
 
@@ -25,8 +23,6 @@ def cite(argument_path):
 
     # Find evidence for each claim
     for index, claim in enumerate(argument_claims):
-
-        print(index, claim)
 
         # Create a try / except block to handle errors
         try:
@@ -67,8 +63,6 @@ def cite(argument_path):
             print(e)
 
             pass
-
-    print(res)
 
     return res
 
