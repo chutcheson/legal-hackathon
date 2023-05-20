@@ -18,15 +18,33 @@ def cite(argument_path):
     # Instantiate collection of evidence
     evidence_collection = create_collection()
 
+    # Create a dictionary to store claims and their evidence
+    res = {}
+
     # Find evidence for each claim
-    for claim in argument_claims:
+    for index, claim in enumerate(argument_claims):
 
-        # Get relevant documents
-        results = collection.query(
-        query_texts=[claim],
-        n_results=5
-        )
+        # Create a try / except block to handle errors
+        try:
 
-        # Get supporting and opposing evidence
-        classification = evidence_classification(results)
+            # Get relevant documents
+            results = collection.query(
+            query_texts=[claim],
+            n_results=5
+            )['documents']
+
+            # Get supporting and opposing evidence
+            classification = evidence_classification(results)
+
+            # Create entry for claim in res dictionary
+            res[index] = { "claim": claim }
+
+            # Update entry with classification information
+            res[index].update(classification)
+
+        except:
+
+            pass
+
+    return res
 

@@ -20,3 +20,33 @@ Example response: ["The uprising in Libya started a wave of social protest.", "T
 """
 
 claims_prompt = HumanMessagePromptTemplate.from_template(claims_prompt_template)
+
+classification_prompt_template = """
+Claim: {claim}
+
+Evidence: {evidence}
+
+Given the JSON objects representing evidence provided above, determine whether any of the evidence supports or opposes the claim.
+
+Return the classification as a JSON object.
+
+{{
+    "Supportive" : [
+        {{ 
+            "email_id" : "insert email id here",
+            "text" : "insert text supporting the claim here"
+            "reason" : "insert reason for classification here"
+        }}, ...
+    ],
+
+    "Opposing" : [
+        {{
+            "email_id" : "insert email id here",
+            "text" : "insert text opposing the claim here"
+            "reason" : "insert reason for classification here"
+        }}, ...
+    ]
+}}
+"""
+
+classification_prompt = HumanMessagePromptTemplate.from_template(classification_prompt_template)
