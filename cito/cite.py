@@ -15,6 +15,8 @@ def cite(argument_path):
     # Convert argument into claims
     argument_claims = claims(argument)
 
+    print(argument_claims)
+
     # Instantiate collection of evidence
     evidence_collection = create_collection()
 
