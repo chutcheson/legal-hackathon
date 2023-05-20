@@ -24,6 +24,8 @@ def cite(argument_path):
     # Find evidence for each claim
     for index, claim in enumerate(argument_claims):
 
+        print(index, claim)
+
         # Create a try / except block to handle errors
         try:
 
