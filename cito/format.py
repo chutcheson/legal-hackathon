@@ -1,6 +1,6 @@
 def format_citations(citations):
 
-    res = ""
+    res = "" 
 
     for claim_idx in citations:
 
@@ -23,6 +23,7 @@ def format_citations(citations):
 
         opposing_evidence = citations[claim_idx]["opposing_evidence"]
 
+        res += "=======================================\n"
         res += "=======================================\n"
         res += "=======================================\n"
 
