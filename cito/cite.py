@@ -33,7 +33,7 @@ def cite(argument_path):
             documents = collection.query(
             query_texts=[claim],
             n_results=5
-            )['documents']
+            )['documents'][0]
 
             print(documents)
 
