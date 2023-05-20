@@ -39,8 +39,10 @@ def cite(argument_path):
             # Get supporting and opposing evidence
             classification = evidence_classification(document_text)
 
+            print(classification)
+
             # Create entry for claim in res dictionary
-            res[index] = { "claim": claim }
+            res[index] = { "claim" : claim }
 
             # Update entry with classification information
             res[index].update(classification)
