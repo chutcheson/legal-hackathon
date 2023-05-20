@@ -56,6 +56,8 @@ def cite(argument_path):
                 # Opposing evidence
                 res["opposing"].extend(classification["opposing"])
 
+            print(res)
+
         except Exception as e:
 
             print(e)
