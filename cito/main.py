@@ -1,8 +1,13 @@
 from cito.cite import cite
 from cito.format import format_citations
 
-citations = cite("~/Projects/legal-hackathon/test_argument.txt")
+if __name__ == "__main__":
 
-print(format_citations(citations))
+    citations = cite("~/Projects/legal-hackathon/test_argument.txt")
+
+    formatted_citations = format_citations(citations)
+
+    with open("formatted_citations.txt", "w") as f:
+        f.write(formatted_citations)
 
 
