@@ -32,7 +32,7 @@ def cite(argument_path):
         try:
 
             # Create entry for claim in res dictionary
-            res[index] = { "claim" : claim, "supportive" : [], "opposing" : [] }
+            res[index] = { "claim" : claim, "supportive_evidence" : [], "opposing_evidence" : [] }
 
             # Get relevant documents
             evidence = evidence_collection.query(
