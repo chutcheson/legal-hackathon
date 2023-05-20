@@ -6,10 +6,10 @@ def format_citations(citations):
 
         claim = citations[claim_idx]["claim"]
 
-        res += "=======================================\n"
+        res += "=======================================\n\n"
         res += f"Claim Index: {claim_idx}\n"
         res += f"Claim: {claim}\n"
-        res += "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n"
+        res += "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SUPPORTIVE\n"
 
         supportive_evidence = citations[claim_idx]["supportive_evidence"]
 
@@ -20,7 +20,7 @@ def format_citations(citations):
             res += f"Reason: {evidence['reason']}\n"
             res += "---------------------------------------\n"
 
-        res += ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"
+        res += "OPPOSING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"
 
         opposing_evidence = citations[claim_idx]["opposing_evidence"]
 
@@ -30,7 +30,5 @@ def format_citations(citations):
             res += f"Evidence: {evidence['text']}\n"
             res += f"Reason: {evidence['reason']}\n"
             res += "---------------------------------------\n"
-
-        res += "=======================================\n"
 
     return res
