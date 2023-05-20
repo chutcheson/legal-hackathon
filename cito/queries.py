@@ -25,7 +25,7 @@ def claims(text):
 
     return res
 
-def evidence_classification(evidence):
+def evidence_classification(claim, evidence):
 
     # Instantiate the chat model 
     chat = ChatOpenAI()
@@ -33,7 +33,7 @@ def evidence_classification(evidence):
     # Create a list of messages
     messages = [
         SystemMessage(content="You are a legal expert, skilled at classifying evidence."),
-        classification_prompt.format(evidence=evidence)
+        classification_prompt.format(claim=claim, evidence=evidence)
     ]
 
     # Get the JSON response from the chat model
