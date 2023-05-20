@@ -53,10 +53,10 @@ def cite(argument_path):
                 print(classification)
 
                 # Supportive evidence
-                res["supportive"].extend(classification["supportive"])
+                res[index]["supportive"].extend(classification["supportive"])
 
                 # Opposing evidence
-                res["opposing"].extend(classification["opposing"])
+                res[index]["opposing"].extend(classification["opposing"])
 
             print(res)
 
