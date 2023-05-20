@@ -29,25 +29,30 @@ def cite(argument_path):
         # Create a try / except block to handle errors
         try:
 
+            # Create entry for claim in res dictionary
+            res[index] = { "claim" : claim, "supportive" : [], "opposing" : [] }
+
             # Get relevant documents
-            documents = evidence_collection.query(
+            evidence = evidence_collection.query(
             query_texts=[claim],
             n_results=5
-            )['documents'][0]
+            )
+           
+            # Extract relevant parts of evidence
+            ids = evidence['ids']
+            documents = evidence['documents']
 
-            # Convert results into single string
-            document_text = "".join(documents)
+            # loop over potentially relevant documents
+            for idx, document in zip(ids, documents):
 
-            # Get supporting and opposing evidence
-            classification = evidence_classification(claim, document_text)
+                # Get supporting and opposing evidence
+                classification = evidence_classification(claim, document_text)
 
-            print(classification)
+                # Supportive evidence
+                res["supportive"].extend(classification["supportive"])
 
-            # Create entry for claim in res dictionary
-            res[index] = { "claim" : claim }
-
-            # Update entry with classification information
-            res[index].update(classification)
+                # Opposing evidence
+                res["opposing"].extend(classification["opposing"])
 
         except Exception as e:
 
