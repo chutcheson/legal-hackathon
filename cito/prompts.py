@@ -29,14 +29,14 @@ Given the JSON objects representing evidence provided above, determine whether a
 Return the classification as a JSON object.
 
 {{
-    "supportive" : [
+    "supportive_evidence" : [
         {{ 
             "text" : "insert text supporting the claim here"
             "reason" : "insert reason for classification here"
         }}, ...
     ],
 
-    "opposing" : [
+    "opposing_evidence" : [
         {{
             "text" : "insert text opposing the claim here"
             "reason" : "insert reason for classification here"

@@ -1,4 +1,8 @@
 from cito.cite import cite
+from cito.format import format_citations
 
-for index, evidence in cite("~/Projects/legal-hackathon/test_argument.txt"):
-    print(index, evidence)
+citations = cite("~/Projects/legal-hackathon/test_argument.txt"):
+
+print(format_citations(citations))
+
+
