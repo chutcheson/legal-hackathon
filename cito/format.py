@@ -8,7 +8,7 @@ def format_citations(citations):
 
         res += "=======================================\n\n"
         res += f"Claim Index: {claim_idx}\n"
-        res += f"Claim: {claim}\n"
+        res += f"Claim: {claim}\n\n"
         res += "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< SUPPORTIVE\n"
 
         supportive_evidence = citations[claim_idx]["supportive_evidence"]
@@ -30,5 +30,7 @@ def format_citations(citations):
             res += f"Evidence: {evidence['text']}\n"
             res += f"Reason: {evidence['reason']}\n"
             res += "---------------------------------------\n"
+
+        res += "\n\n\n\n"
 
     return res
