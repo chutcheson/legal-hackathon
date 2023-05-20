@@ -13,7 +13,9 @@ directory = "~/Projects/legal-hackathon/data/Emails.csv"
 directory = os.path.expanduser(directory)
 
 # Load the legal materials into a Pandas dataframe
-evidence_df = pd.read_csv(directory).sample(1000, random_state=42).reset_index(drop=True)
+evidence_df = pd.read_csv(directory)[:100]
+
+#.sample(1000, random_state=42).reset_index(drop=True)
 
 # Create a Chroma client to store the emails
 chroma_client = chromadb.Client()
