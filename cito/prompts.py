@@ -12,8 +12,6 @@ Given the argument above. Break the argument into its claims. Each claim should 
 
 Return the claims as a JSON list.
 
-["Claim1", "Claim2", "Claim3"...]
-
 Example argument: Argument: The uprising in Libya started a wave of social protest. These social protests are dangerous to the United States and its interests. Hillary Clinton wrote an email to George Bush detailing these concerns in 2007.
 
 Example response: ["The uprising in Libya started a wave of social protest.", "The social protests in Libya are dangerous to the United States and its interests.", "Hillary Clinton wrote an email to George Bush detailing these concerns in 2007."]
