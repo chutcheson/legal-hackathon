@@ -23,9 +23,7 @@ def format_citations(citations):
 
         opposing_evidence = citations[claim_idx]["opposing_evidence"]
 
-        res += "=======================================\n"
-        res += "=======================================\n"
-        res += "=======================================\n"
+        res += "OPPOSING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"
 
         for document, evidence in opposing_evidence:
 
@@ -34,7 +32,6 @@ def format_citations(citations):
             res += f"Reason: {evidence['reason']}\n"
             res += "---------------------------------------\n"
 
-        res += "OPPOSING >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n"
 
         res += "\n\n\n\n"
 
