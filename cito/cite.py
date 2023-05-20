@@ -45,10 +45,10 @@ def cite(argument_path):
             # loop over potentially relevant documents
             for idx, document in zip(ids, documents):
 
-                print(document)
-
                 # Get supporting and opposing evidence
                 classification = evidence_classification(claim, document)
+
+                print(classification)
 
                 # Supportive evidence
                 res["supportive"].extend(classification["supportive"])
