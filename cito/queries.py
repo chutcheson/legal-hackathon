@@ -42,6 +42,8 @@ def evidence_classification(evidence):
     # Convert JSON response into a Python object
     res = json.loads(res)
 
+    print(res)
+
     return res
 
 
