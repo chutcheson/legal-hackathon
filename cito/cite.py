@@ -43,8 +43,6 @@ def cite(argument_path):
             # loop over potentially relevant documents
             for idx, document in zip(ids, documents):
 
-                print(f"document idx: {idx}")
-
                 # Get supporting and opposing evidence
                 classification = evidence_classification(claim, document)
 
@@ -55,8 +53,6 @@ def cite(argument_path):
 
                 # Opposing evidence
                 res[index]["opposing_evidence"].extend([(idx, opposing_classification) for opposing_classification in classification["opposing_evidence"]])
-
-            print(res[index])
 
         except Exception as e:
 
