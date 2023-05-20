@@ -1,6 +1,6 @@
 import os
 
-from cito.queries import claims
+from cito.queries import claims, evidence_classification
 from cito.load_documents import create_collection
 
 def cite(argument_path): 
@@ -15,9 +15,18 @@ def cite(argument_path):
     # Convert argument into claims
     argument_claims = claims(argument)
 
-    print(argument_claims)
-
     # Instantiate collection of evidence
     evidence_collection = create_collection()
 
-cite("~/Projects/legal-hackathon/test_argument.txt")
+    # Find evidence for each claim
+    for claim in argument_claims:
+
+        # Get relevant documents
+        results = collection.query(
+        query_texts=[claim],
+        n_results=5
+        )
+
+        # Get supporting and opposing evidence
+        classification = evidence_classification(results)
+
