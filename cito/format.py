@@ -7,7 +7,7 @@ def format_citations(citations):
         claim = citations[claim_idx]["claim"]
 
         res += "=======================================\n"
-        res += f"Claim Index: claim_idx}\n"
+        res += f"Claim Index: {claim_idx}\n"
         res += f"Claim: {claim}\n"
         res += "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n"
 
