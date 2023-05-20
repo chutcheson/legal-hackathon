@@ -20,6 +20,8 @@ def claims(text):
     # Get the JSON response from the chat model
     res = chat(messages)
 
+    print(res)
+
     # Convert JSON response into a Python object
     res = json.loads(res)
 
