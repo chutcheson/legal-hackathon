@@ -50,6 +50,8 @@ def cite(argument_path):
                 # Get supporting and opposing evidence
                 classification = evidence_classification(claim, document)
 
+                print(classification)
+
                 # Supportive evidence
                 res["supportive"].extend(classification["supportive"])
 
