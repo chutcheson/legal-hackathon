@@ -39,7 +39,7 @@ def cite(argument_path):
             document_text = "".join(documents)
 
             # Get supporting and opposing evidence
-            classification = evidence_classification(document_text)
+            classification = evidence_classification(claim, document_text)
 
             print(classification)
 
