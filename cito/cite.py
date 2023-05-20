@@ -53,18 +53,20 @@ def cite(argument_path):
                 print(classification)
 
                 # Supportive evidence
-                res[index]["supportive"].extend(classification["supportive"])
+                res[index]["supportive"].extend([(idx, supportive_classification for supportive_classification in classification["supportive"])])
 
                 # Opposing evidence
-                res[index]["opposing"].extend(classification["opposing"])
+                res[index]["opposing"].extend([(idx, opposing_classification for opposing_classification in classification["opposing"])])
 
-            print(res)
+            print(res[index])
 
         except Exception as e:
 
             print(e)
 
             pass
+
+    print(res)
 
     return res
 
