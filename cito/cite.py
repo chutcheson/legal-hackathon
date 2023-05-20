@@ -37,7 +37,7 @@ def cite(argument_path):
             # Get relevant documents
             evidence = evidence_collection.query(
             query_texts=[claim],
-            n_results=5
+            n_results=3
             )
            
             # Extract relevant parts of evidence
