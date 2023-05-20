@@ -39,8 +39,8 @@ def cite(argument_path):
             )
            
             # Extract relevant parts of evidence
-            ids = evidence['ids']
-            documents = evidence['documents']
+            ids = evidence['ids'][0]
+            documents = evidence['documents'][0]
 
             # loop over potentially relevant documents
             for idx, document in zip(ids, documents):
@@ -49,8 +49,6 @@ def cite(argument_path):
 
                 # Get supporting and opposing evidence
                 classification = evidence_classification(claim, document)
-
-                print(classification)
 
                 # Supportive evidence
                 res["supportive"].extend(classification["supportive"])
