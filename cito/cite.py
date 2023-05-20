@@ -24,19 +24,20 @@ def cite(argument_path):
     # Find evidence for each claim
     for index, claim in enumerate(argument_claims):
 
-        print(index, claim)
-
         # Create a try / except block to handle errors
         try:
 
             # Get relevant documents
-            results = collection.query(
+            documents = collection.query(
             query_texts=[claim],
             n_results=5
             )['documents']
 
+            # Convert results into single string
+            document_text = "".join(documents)
+
             # Get supporting and opposing evidence
-            classification = evidence_classification(results)
+            classification = evidence_classification(document_text)
 
             # Create entry for claim in res dictionary
             res[index] = { "claim": claim }
