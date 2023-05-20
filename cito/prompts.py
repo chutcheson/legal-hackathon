@@ -5,7 +5,7 @@ from langchain.prompts.chat import (
     HumanMessagePromptTemplate,
 )
 
-claims_prompt_text = """
+claims_prompt_template = """
 Argument: {argument}
 
 Given the argument above. Break the argument into its claims.
@@ -19,4 +19,4 @@ Example argument: Argument: The uprising in Libya started a wave of social prote
 Example response: ["The uprising in Libya started a wave of social protest.", "These social protests are dangerous to the United States and its interests.", "Hillary Clinton wrote an email to George Bush detailing these concerns in 2007."]
 """
 
-claims_prompt = HumanMessagePromptTemplate(input_variables=["argument"])
+claims_prompt = HumanMessagePromptTemplate(input_variables=["argument"], template=claims_prompt_template)
