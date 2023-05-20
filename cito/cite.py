@@ -13,7 +13,11 @@ def cite(argument_path):
         argument = f.read()
 
     # Convert argument into claims
+    argument_claims = claims(argument)
 
+    print(argument_claims)
 
     # Instantiate collection of evidence
     evidence_collection = create_collection()
+
+cite("~/Projects/legal-hackathon/test_argument.txt")
