@@ -30,7 +30,7 @@ def cite(argument_path):
         try:
 
             # Get relevant documents
-            documents = collection.query(
+            documents = evidence_collection.query(
             query_texts=[claim],
             n_results=5
             )['documents'][0]
