@@ -1,6 +1,7 @@
 import json
 
 from langchain.chat_models import ChatOpenAI
+from langchain.schema import SystemMessage
 
 from prompts import claims_prompt
 
