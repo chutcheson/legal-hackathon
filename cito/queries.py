@@ -9,7 +9,7 @@ from prompts import claims_prompt, classification_prompt
 def claims(text):
     
     # Instantiate the chat model 
-    chat = ChatOpenAI(model='gpt-4')
+    chat = ChatOpenAI(model_name='gpt-4')
 
     # Create a list of messages
     messages = [
@@ -28,7 +28,7 @@ def claims(text):
 def evidence_classification(claim, evidence):
 
     # Instantiate the chat model 
-    chat = ChatOpenAI(model='gpt-4')
+    chat = ChatOpenAI(model_name='gpt-4')
 
     # Create a list of messages
     messages = [
