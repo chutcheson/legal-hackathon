@@ -3,11 +3,9 @@ from cito.format import format_citations
 
 if __name__ == "__main__":
 
-    citations = cite("~/Projects/legal-hackathon/test_argument.txt")
+    citations = cite("../test_argument.txt")
 
     formatted_citations = format_citations(citations)
 
     with open("formatted_citations.txt", "w") as f:
         f.write(formatted_citations)
-
-
